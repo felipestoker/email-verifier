@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Email Verify</title>
+        <style>
+            * {box-sizing: border-box;}
+
+            body {
+                font-family: Arial, sans-serif;
+                background: #76b852; /* fallback for old browsers */
+                background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+                background: -moz-linear-gradient(right, #76b852, #8DC26F);
+                background: -o-linear-gradient(right, #76b852, #8DC26F);
+                background: linear-gradient(to left, #76b852, #8DC26F);
+                font-family: "Roboto", sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;      
+            }
+
+            .container {
+                position: relative;
+                max-width: 300px;
+                margin: 0 auto;
+                padding: 20px;
+                background: #FFFFFF;
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                border-radius: 5px;
+            }
+
+            h1 {
+                text-align: center;
+                color: #333;
+                font-size: 20px;
+            }
+
+            textarea {
+                width: 100%;
+                border: 1px solid #f0f0f0;
+                margin: 10px 0;
+                padding: 10px;
+                resize: vertical;
+            }
+
+            .submit-btn {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                background-color: #007BFF;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 10px;
+                font-size: 15px;
+                font-weight: 800;
+            }
+
+            .submit-btn:hover {
+                background-color: #0056b3;
+            }
+
+            .info-text {
+                margin-top: 20px;
+                font-size: 14px;
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Email Verify</h1>
+            <form action="/" method="post">
+                <textarea name="emails" rows="10"></textarea>
+                <br>
+                <input class="submit-btn" type="submit" value="Verify">
+            </form>
+            <p class="info-text">This email verifier checks the syntax of the email addresses and verifies if the domain has valid MX records. 
+        It does not check if the mailbox actually exists. Therefore, there may be cases of false positives, 
+        where an email address is identified as "valid", but in reality, it does not exist. 
+        For a more thorough check, consider using a third-party email verification service.</p>
+        </div>
+    </body>
+</html>
